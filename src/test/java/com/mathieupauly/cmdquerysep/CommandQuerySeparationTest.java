@@ -39,7 +39,7 @@ public class CommandQuerySeparationTest {
     }
 
     private void add(int left) {
-        result = result + left;
+        result += left;
     }
 
 }
