@@ -16,7 +16,6 @@ public class CommandQuerySeparationTest {
         final int left = Integer.parseInt(elements[0]);
         final int right = Integer.parseInt(elements[1]);
 
-        result = 0;
         add(left);
         add(right);
 
@@ -25,7 +24,6 @@ public class CommandQuerySeparationTest {
 
     @Test
     public void add_1_2() {
-        result = 0;
         add(1);
         add(2);
 
