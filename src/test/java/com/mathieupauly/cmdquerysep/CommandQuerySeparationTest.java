@@ -8,6 +8,10 @@ public class CommandQuerySeparationTest {
 
     @Test
     public void add_1_2() {
-        assertThat(1 + 2).isEqualTo(3);
+        assertThat(add(1, 2)).isEqualTo(3);
+    }
+
+    private int add(int left, int right) {
+        return left + right;
     }
 }
