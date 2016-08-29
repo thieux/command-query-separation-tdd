@@ -16,16 +16,20 @@ public class CommandQuerySeparationTest {
         final int left = Integer.parseInt(elements[0]);
         final int right = Integer.parseInt(elements[1]);
 
-        final int sum = add(left, right);
+        final int result = add(left, right);
 
-        return String.valueOf(sum);
+        return String.valueOf(sum(result));
     }
 
     @Test
     public void add_1_2() {
-        final int sum = add(1, 2);
+        final int result = add(1, 2);
 
-        assertThat(sum).isEqualTo(3);
+        assertThat(sum(result)).isEqualTo(3);
+    }
+
+    private int sum(int sum) {
+        return sum;
     }
 
     private int add(int left, int right) {
