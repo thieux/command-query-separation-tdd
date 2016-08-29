@@ -2,6 +2,9 @@ package com.mathieupauly.cmdquerysep;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CommandQuerySeparationTest {
@@ -30,14 +33,19 @@ public class CommandQuerySeparationTest {
         assertThat(sum()).isEqualTo(3);
     }
 
-    private int result;
+    private List<Integer> list = new ArrayList<>();
 
     private int sum() {
-        return result;
+        Integer res = 0;
+        for (Integer left : list) {
+            res += left;
+
+        }
+        return res;
     }
 
     private void add(int left) {
-        result += left;
+        list.add(left);
     }
 
 }
